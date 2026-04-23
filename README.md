@@ -32,9 +32,9 @@ Deploys 100 particles over 1,000 iterations, tested 20 times. A continuous-to-di
 
 All three algorithms enforce the following constraints throughout the search process:
 
-- **Temperature constraint** — each race must be held during a week where circuit temperature falls within the acceptable range of 15°C to 35°C
-- **Summer shutdown** — no races may be scheduled during weeks 29, 30, or 31
-- **Home base routing** — travel distance is calculated from Mugello (Italy) as the team home base, returning between non-consecutive races
+- **Temperature constraint**: each race must be held during a week where circuit temperature falls within the acceptable range of 15°C to 35°C
+- **Summer shutdown**: no races may be scheduled during weeks 29, 30, or 31
+- **Home base routing**: travel distance is calculated from Mugello (Italy) as the team home base, returning between non-consecutive races
 
 ### Unit Tests
 
@@ -73,10 +73,22 @@ Eight unit tests covering core utility functions including distance calculation,
 ## Project Structure
 
 ```
-motogp-calendar-optimisation/
-    motogp-calendar-base.py       # Full implementation of all three optimisation algorithms and unit tests
-    track-locations.csv           # Circuit coordinates and weekly temperature data for all 22 tracks
-    race-weekends.csv             # Original MotoGP calendar mapping each of the 22 races to a week number
+.
+├── README.md                          # Project documentation and overview for GitHub
+│
+├── docs/
+│   └── screenshots/                   # Visual results and demonstrations of algorithms
+│       ├── genetic-algorithms.png    # Output/ of Genetic Algorithm optimisation
+│       ├── particle-swarm-optimisation.png  # Output of Particle Swarm Optimisation
+│       ├── simulated-annealing.png   # Output of Simulated Annealing process
+│       └── unit-tests.png            # Evidence of unit test execution and validation
+│
+├── motogp-calendar-base.py           # Main Python implementation including all optimisation algorithms
+│                                     # (Simulated Annealing, Genetic Algorithms, Particle Swarm Optimisation)
+│                                     # and associated unit tests
+│
+├── race-weekends.csv                 # Dataset mapping MotoGP races to scheduled week numbers
+├── track-locations.csv               # Track metadata including circuit coordinates and temperature data
 ```
 
 The repository contains one Python file and two CSV data files. Project documentation exists separately but is not included in this repository.
