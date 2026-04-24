@@ -158,7 +158,7 @@ Contains the original MotoGP race calendar, mapping each of the 22 races to its 
 **Clone the repository**
 
 ```bash
-git clone https://github.com/TahseenLabs/motogp-calendar-optimisation.git
+git clone https://github.com/TahseenLabs/metaheuristic_optimization_algorithms.git
 cd motogp-calendar-optimisation
 ```
 
